@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+.header {
+  background-color: blueviolet;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 3.2rem;
+  color: white;
+}
+
+.main {
+  position: absolute;
+  background-color: rgb(46, 46, 46);
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.cartitem-container {
+  width: 100%;
+  height: 6rem;
+  color: #fff;
+  border-bottom: 1px solid orangered;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+}
+.cartitem-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cartitem-details h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cartitem-details p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.cartitem-details span {
+  display: inline-block;
+  color: orangered;
+  font-size: 1.8rem;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 1rem;
+}
+
+.cartadd-details label {
+  font-size: 1.2rem;
+}
+
+.cartadd-details input {
+  border: none;
+}
+
+.cartadd-details input:focus {
+  outline: none;
+}
+
+.cartadd-details button {
+  background: orangered;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  grid-column: 1 / -1;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: rgb(53, 53, 53);
+}
+
+.cart-btn span {
+  padding: 0.4rem 0.8rem;
+  background-color: orangered;
+  border-radius: 6px;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.692);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* pointer-events: none; */
+}
+
+.hidden {
+  display: none;
+}
+
+.carted-items {
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  border-radius: 2.2rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.close-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+}
+
+/* .list-items-cart {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+} */
+
+.cart-items {
+  /* background-color: green; */
+  /* overflow: hidden; */
+  list-style: none;
+  color: #333;
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 22%;
+  border-bottom: 1px solid rgba(37, 37, 37, 0.61);
+  /* padding: 2rem; */
+}
+
+.left-container p {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.left-container .price {
+  color: orangered;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.left-container .total-cart {
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  padding: 0.2rem 0.6rem;
+  background-color: rgb(31, 30, 30);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.right-container button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid orangered;
+  margin-right: 1.4rem;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+/* .list-item-carted {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: greenyellow; 
+} */
+
+/* .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 14;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.692);
+  /* margin: auto auto; */
+
+/* display: hidden; */
